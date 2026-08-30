@@ -175,7 +175,7 @@ export default function HomePage() {
   return (
     <div className="bg-[#09090B] text-[#FFFFFF] overflow-hidden">
       {/* 1. HERO SECTION — Full-Width 2-Column Split */}
-      <section className="relative w-full pt-4 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative w-full pt-8 pb-14 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[calc(100vh-80px)] flex flex-col justify-center">
         {/* Ambient Radial Glows */}
         <div className="gold-glow-orb w-[500px] h-[500px] -top-32 -left-32 opacity-15" />
         <div className="brown-glow-orb w-[500px] h-[500px] top-1/3 -right-48 opacity-15" />
@@ -194,14 +194,14 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-center min-h-[88vh]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-center">
             {/* Left Column: Bold Clean Typography */}
-            <div className="text-left flex flex-col items-start justify-center">
+            <div className="text-left flex flex-col items-start">
               {/* Micro Tag */}
               <motion.div
-                initial={{ opacity: 0, y: -10 }}
+                initial={{ opacity: 0, y: -6 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.3 }}
                 className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 backdrop-blur-md mb-4"
               >
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -212,9 +212,9 @@ export default function HomePage() {
 
               {/* Headline with Balanced Responsive Sizing */}
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold font-display tracking-tight text-white leading-[1.12] mb-5"
               >
                 ELEVATE YOUR <br className="hidden sm:inline" />
@@ -223,9 +223,9 @@ export default function HomePage() {
 
               {/* Subtitle */}
               <motion.p
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.15 }}
+                transition={{ duration: 0.35, delay: 0.08 }}
                 className="max-w-lg text-xs sm:text-sm md:text-base text-zinc-300 font-normal leading-relaxed mb-6"
               >
                 A high-performance sanctuary engineered for athletes, executives, and dedicated lifters. Master coach periodization, calibrated Swedish Eleiko steel, and Nordic contrast recovery.
