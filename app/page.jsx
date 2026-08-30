@@ -175,7 +175,7 @@ export default function HomePage() {
   return (
     <div className="bg-[#09090B] text-[#FFFFFF] overflow-hidden">
       {/* 1. HERO SECTION — Full-Width 2-Column Split */}
-      <section className="relative w-full pt-10 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative w-full pt-4 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Ambient Radial Glows */}
         <div className="gold-glow-orb w-[500px] h-[500px] -top-32 -left-32 opacity-15" />
         <div className="brown-glow-orb w-[500px] h-[500px] top-1/3 -right-48 opacity-15" />
@@ -194,9 +194,9 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-center min-h-[80vh]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-center min-h-[88vh]">
             {/* Left Column: Bold Clean Typography */}
-            <div className="text-left flex flex-col items-start justify-center py-10">
+            <div className="text-left flex flex-col items-start justify-center">
               {/* Micro Tag */}
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
@@ -305,7 +305,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Column: Visual Athletic Card with Floating Glass Overlays */}
-            <div className="relative flex justify-center lg:justify-end w-full py-10">
+            <div className="relative flex justify-center lg:justify-end w-full">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
