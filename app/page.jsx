@@ -342,6 +342,7 @@ export default function HomePage() {
                 </div>
               </motion.div>
             </div>
+          </div>
         </div>
       </section>
 
