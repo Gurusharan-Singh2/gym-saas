@@ -91,10 +91,10 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
+        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
           scrolled
-            ? 'glass-header py-2.5 shadow-xl'
-            : 'bg-[#09090B]/95 backdrop-blur-md py-3.5 border-b border-zinc-800'
+            ? 'bg-[#09090B]/95 backdrop-blur-md py-2.5 shadow-2xl border-b border-zinc-800'
+            : 'bg-[#09090B] py-3.5 border-b border-zinc-800'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -181,77 +181,84 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
+            type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-white hover:bg-zinc-800 transition-colors"
+            className="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-white hover:bg-zinc-800 focus:outline-none transition-colors"
             aria-label="Toggle Navigation"
           >
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5 text-white" />}
           </button>
         </div>
-      </header>
 
-      {/* Mobile Drawer */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="lg:hidden bg-[#0F0F12] border-b border-zinc-800 px-4 pt-3 pb-6 shadow-2xl relative z-40"
-          >
-            <div className="flex flex-col space-y-2">
-              {NAV_LINKS.map((link) => {
-                const isActive = pathname === link.href;
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
-                      isActive
-                        ? 'bg-zinc-800 text-white font-extrabold'
-                        : 'text-zinc-300 hover:bg-zinc-900 hover:text-white'
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                );
-              })}
-
-              <div className="pt-4 border-t border-zinc-800 flex flex-col gap-2.5">
-                {currentUser ? (
-                  currentUser.role === 'admin' || currentUser.role === 'staff' ? (
+        {/* Mobile Navigation Drawer Dropdown (Inside Header Container with Sticky Support) */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2, ease: 'easeOut' }}
+              className="lg:hidden bg-[#09090B] border-t border-zinc-800 px-4 pt-3 pb-6 shadow-2xl mt-3 max-h-[85vh] overflow-y-auto"
+            >
+              <div className="flex flex-col space-y-1.5">
+                {NAV_LINKS.map((link) => {
+                  const isActive = pathname === link.href;
+                  return (
                     <Link
-                      href="/admin"
-                      className="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-xs font-bold uppercase tracking-wider text-white text-center"
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`px-4 py-3 rounded-xl text-sm font-bold uppercase tracking-wider transition-all flex items-center justify-between ${
+                        isActive
+                          ? 'bg-white text-black font-extrabold'
+                          : 'text-white hover:bg-zinc-900'
+                      }`}
                     >
-                      Access Admin Console
+                      <span>{link.name}</span>
+                      <ArrowRight className={`w-4 h-4 ${isActive ? 'text-black' : 'text-zinc-500'}`} />
                     </Link>
-                  ) : (
-                    <div className="text-xs text-zinc-300 text-center py-2 font-medium">
-                      Signed in as <span className="font-bold text-white">{currentUser.name}</span>
-                    </div>
-                  )
-                ) : (
-                  <Link
-                    href="/login"
-                    className="w-full py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-bold uppercase tracking-wider text-white text-center"
-                  >
-                    Member & Staff Sign In
-                  </Link>
-                )}
+                  );
+                })}
 
-                <Link href="/pricing">
-                  <MotionButton className="btn-gold w-full py-3 rounded-xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-2">
-                    <span>Claim 3-Day Trial Pass</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </MotionButton>
-                </Link>
+                <div className="pt-4 mt-2 border-t border-zinc-800 flex flex-col gap-2.5">
+                  {currentUser ? (
+                    currentUser.role === 'admin' || currentUser.role === 'staff' ? (
+                      <Link
+                        href="/admin"
+                        onClick={() => setIsOpen(false)}
+                        className="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-xs font-bold uppercase tracking-wider text-white text-center flex items-center justify-center gap-2"
+                      >
+                        <Shield className="w-4 h-4 text-white" />
+                        <span>Access Admin Console</span>
+                      </Link>
+                    ) : (
+                      <div className="text-xs text-zinc-300 text-center py-2 font-medium bg-zinc-900/60 rounded-xl border border-zinc-800">
+                        Signed in as <span className="font-bold text-white">{currentUser.name}</span>
+                      </div>
+                    )
+                  ) : (
+                    <Link
+                      href="/login"
+                      onClick={() => setIsOpen(false)}
+                      className="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-bold uppercase tracking-wider text-white text-center flex items-center justify-center gap-2"
+                    >
+                      <User className="w-4 h-4 text-white" />
+                      <span>Member & Staff Sign In</span>
+                    </Link>
+                  )}
+
+                  <Link href="/pricing" onClick={() => setIsOpen(false)}>
+                    <MotionButton className="btn-gold w-full py-3.5 rounded-xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-2">
+                      <span>Claim 3-Day Trial Pass</span>
+                      <ArrowRight className="w-4 h-4 text-black" />
+                    </MotionButton>
+                  </Link>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
     </>
   );
 }

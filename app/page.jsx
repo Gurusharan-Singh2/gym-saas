@@ -175,23 +175,9 @@ export default function HomePage() {
   return (
     <div className="bg-[#09090B] text-[#FFFFFF] overflow-hidden">
       {/* 1. HERO SECTION — Full-Width 2-Column Split */}
-      <section className="relative w-full pt-8 pb-14 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[calc(100vh-80px)] flex flex-col justify-center">
-        {/* Ambient Radial Glows */}
-        <div className="gold-glow-orb w-[500px] h-[500px] -top-32 -left-32 opacity-15" />
-        <div className="brown-glow-orb w-[500px] h-[500px] top-1/3 -right-48 opacity-15" />
+      <section className="relative w-full px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[calc(100vh-80px)] flex flex-col justify-center">
 
-        {/* Hero Background Atmosphere */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&auto=format&fit=crop&q=85"
-            alt="Luxury Gym Atmosphere"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center opacity-10"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#09090B]/90 via-[#09090B]/70 to-[#09090B]" />
-        </div>
+
 
         <div className="relative z-10 max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-center">
@@ -532,21 +518,19 @@ export default function HomePage() {
           <div className="inline-flex items-center p-1.5 rounded-2xl bg-[#141418] border border-zinc-800">
             <button
               onClick={() => setBillingCycle('monthly')}
-              className={`px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
-                billingCycle === 'monthly'
-                  ? 'btn-gold'
-                  : 'text-zinc-400 hover:text-white'
-              }`}
+              className={`px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${billingCycle === 'monthly'
+                ? 'btn-gold'
+                : 'text-zinc-400 hover:text-white'
+                }`}
             >
               Monthly Billing
             </button>
             <button
               onClick={() => setBillingCycle('yearly')}
-              className={`px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
-                billingCycle === 'yearly'
-                  ? 'btn-gold'
-                  : 'text-zinc-400 hover:text-white'
-              }`}
+              className={`px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${billingCycle === 'yearly'
+                ? 'btn-gold'
+                : 'text-zinc-400 hover:text-white'
+                }`}
             >
               <span>Annual Commitment</span>
               <span className="text-[10px] px-1.5 py-0.5 rounded bg-zinc-900 text-white font-extrabold border border-zinc-700">
@@ -564,11 +548,10 @@ export default function HomePage() {
             return (
               <StaggerItem key={i}>
                 <div
-                  className={`relative rounded-3xl p-7 flex flex-col justify-between h-full transition-all duration-300 ${
-                    tier.popular
-                      ? 'bg-[#18181D] border-2 border-white lg:scale-105 z-10 shadow-2xl'
-                      : 'bg-[#141418] border border-zinc-800 hover:border-zinc-700'
-                  }`}
+                  className={`relative rounded-3xl p-7 flex flex-col justify-between h-full transition-all duration-300 ${tier.popular
+                    ? 'bg-[#18181D] border-2 border-white lg:scale-105 z-10 shadow-2xl'
+                    : 'bg-[#141418] border border-zinc-800 hover:border-zinc-700'
+                    }`}
                 >
                   {tier.popular && (
                     <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black font-extrabold text-[10px] uppercase tracking-widest flex items-center gap-1 shadow-md">
@@ -604,9 +587,8 @@ export default function HomePage() {
 
                   <Link href="/pricing" className="w-full">
                     <MotionButton
-                      className={`w-full py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 ${
-                        tier.popular ? 'btn-gold' : 'btn-outline-gold'
-                      }`}
+                      className={`w-full py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 ${tier.popular ? 'btn-gold' : 'btn-outline-gold'
+                        }`}
                     >
                       <span>Select {tier.name}</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -688,11 +670,10 @@ export default function HomePage() {
               <button
                 key={i}
                 onClick={() => setActiveTestimonial(i)}
-                className={`transition-all rounded-full ${
-                  activeTestimonial === i
-                    ? 'w-6 h-2 bg-white'
-                    : 'w-2 h-2 bg-zinc-700 hover:bg-zinc-500'
-                }`}
+                className={`transition-all rounded-full ${activeTestimonial === i
+                  ? 'w-6 h-2 bg-white'
+                  : 'w-2 h-2 bg-zinc-700 hover:bg-zinc-500'
+                  }`}
                 aria-label={`Slide ${i + 1}`}
               />
             ))}
