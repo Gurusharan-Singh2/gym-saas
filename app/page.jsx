@@ -151,36 +151,36 @@ export default function HomePage() {
 
   const clubPillars = [
     {
-      icon: <Dumbbell className="w-6 h-6 text-[#C5A880]" />,
+      icon: <Dumbbell className="w-6 h-6 text-white" />,
       title: 'Precision Heavy Iron',
       desc: 'Calibrated Olympic discs, custom Swedish Eleiko barbells, and ergonomic Hammer Strength equipment.',
     },
     {
-      icon: <Flame className="w-6 h-6 text-[#C5A880]" />,
+      icon: <Flame className="w-6 h-6 text-white" />,
       title: 'High-Kinetics Studios',
       desc: 'Acoustically isolated studios for metabolic conditioning, authentic boxing rings, and Reformer Pilates.',
     },
     {
-      icon: <HeartPulse className="w-6 h-6 text-[#C5A880]" />,
+      icon: <HeartPulse className="w-6 h-6 text-white" />,
       title: 'Nordic Recovery Circuit',
       desc: 'Contrast therapy featuring 200°F cedar dry saunas, infrared suites, and 38°F cold immersion plunge pools.',
     },
     {
-      icon: <Award className="w-6 h-6 text-[#C5A880]" />,
+      icon: <Award className="w-6 h-6 text-white" />,
       title: 'Elite Master Coaches',
       desc: 'Former Olympians, sports physiologists, and registered dietitians dedicated to your absolute physical peak.',
     },
   ];
 
   return (
-    <div className="bg-[#0D0906] text-[#FFFFFF] overflow-hidden">
-      {/* 1. HERO SECTION */}
-      <section className="relative min-h-[85vh] flex items-center justify-center pt-8 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Ambient Glows */}
-        <div className="gold-glow-orb w-[500px] h-[500px] -top-32 -left-32 opacity-30" />
-        <div className="brown-glow-orb w-[600px] h-[600px] top-1/3 -right-48 opacity-25" />
+    <div className="bg-[#09090B] text-[#FFFFFF] overflow-hidden">
+      {/* 1. HERO SECTION (High-Impact 2-Column Split Hero) */}
+      <section className="relative min-h-[90vh] flex items-center justify-center pt-8 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Ambient Subtle Radial Glows */}
+        <div className="gold-glow-orb w-[600px] h-[600px] -top-32 -left-32 opacity-20" />
+        <div className="brown-glow-orb w-[600px] h-[600px] top-1/3 -right-48 opacity-20" />
 
-        {/* Hero Background */}
+        {/* Hero Background Atmosphere */}
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&auto=format&fit=crop&q=85"
@@ -188,137 +188,219 @@ export default function HomePage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-20"
+            className="object-cover object-center opacity-15"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0D0906]/90 via-[#0D0906]/70 to-[#0D0906]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#0D0906]/60 to-[#0D0906]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#09090B]/90 via-[#09090B]/70 to-[#09090B]" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.12] mb-6 max-w-4xl"
-          >
-            ELEVATE YOUR <br className="hidden sm:inline" />
-            <span className="gold-gradient-text">PERFORMANCE & FORM</span>
-          </motion.h1>
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            {/* Left Column: Bold Typography & Action Area */}
+            <div className="lg:col-span-7 text-left flex flex-col items-start">
+              {/* Micro Tag */}
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800 backdrop-blur-md mb-5"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-[11px] uppercase font-bold tracking-[0.2em] text-zinc-300">
+                  Manhattan Flagship • Private High-Performance Club
+                </span>
+              </motion.div>
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-            className="max-w-2xl text-sm sm:text-base md:text-lg text-brown-200 font-normal leading-relaxed mb-8"
-          >
-            A high-performance sanctuary engineered for athletes, executives, and dedicated lifters. Master coach periodization, calibrated Swedish Eleiko steel, and Nordic contrast recovery.
-          </motion.p>
+              {/* Headline */}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.1] mb-6"
+              >
+                ELEVATE YOUR <br />
+                <span className="gold-gradient-text">PERFORMANCE & FORM</span>
+              </motion.h1>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.25 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-10"
-          >
-            <Link href="/pricing" className="w-full sm:w-auto">
-              <MotionButton className="btn-gold w-full sm:w-auto px-8 py-3.5 rounded-xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-2.5">
-                <span>Claim 3-Day Executive Pass</span>
-                <ArrowRight className="w-4 h-4" />
-              </MotionButton>
-            </Link>
+              {/* Subtitle */}
+              <motion.p
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+                className="max-w-xl text-sm sm:text-base text-zinc-300 font-normal leading-relaxed mb-6"
+              >
+                A high-performance sanctuary engineered for athletes, executives, and dedicated lifters. Master coach periodization, calibrated Swedish Eleiko steel, and Nordic contrast recovery.
+              </motion.p>
 
-            <Link href="/schedule" className="w-full sm:w-auto">
-              <MotionButton className="btn-outline-gold w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2">
-                <Calendar className="w-4 h-4 text-[#C5A880]" />
-                <span>Class Timetable</span>
-              </MotionButton>
-            </Link>
-          </motion.div>
+              {/* Key Highlights Checklist */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 text-xs text-zinc-300 w-full max-w-lg"
+              >
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
+                  <span>Olympic Eleiko Calibrated Suite</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
+                  <span>38°F Cold Plunge & Cedar Sauna</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
+                  <span>InBody 770 Biometric Scans</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
+                  <span>Strict Member Capacity Cap</span>
+                </div>
+              </motion.div>
 
-          {/* Social Proof Row */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 pt-6 border-t border-brown-900/80 text-xs text-brown-300"
-          >
-            <div className="flex items-center gap-2">
-              <div className="flex -space-x-2">
-                <div className="w-7 h-7 rounded-full border border-brown-600 overflow-hidden relative">
-                  <Image src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Member" fill className="object-cover" />
+              {/* Dual CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.25 }}
+                className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto mb-8"
+              >
+                <Link href="/pricing" className="w-full sm:w-auto">
+                  <MotionButton className="btn-gold w-full sm:w-auto px-8 py-3.5 rounded-xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-2.5">
+                    <span>Claim 3-Day Executive Pass</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </MotionButton>
+                </Link>
+
+                <Link href="/schedule" className="w-full sm:w-auto">
+                  <MotionButton className="btn-outline-gold w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2">
+                    <Calendar className="w-4 h-4 text-white" />
+                    <span>Class Timetable</span>
+                  </MotionButton>
+                </Link>
+              </motion.div>
+
+              {/* Social Proof Row */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.35 }}
+                className="flex items-center gap-4 pt-4 border-t border-zinc-800/80 text-xs text-zinc-400"
+              >
+                <div className="flex -space-x-2">
+                  <div className="w-7 h-7 rounded-full border border-zinc-700 overflow-hidden relative">
+                    <Image src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Member" fill className="object-cover" />
+                  </div>
+                  <div className="w-7 h-7 rounded-full border border-zinc-700 overflow-hidden relative">
+                    <Image src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Member" fill className="object-cover" />
+                  </div>
+                  <div className="w-7 h-7 rounded-full border border-zinc-700 overflow-hidden relative">
+                    <Image src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Member" fill className="object-cover" />
+                  </div>
                 </div>
-                <div className="w-7 h-7 rounded-full border border-brown-600 overflow-hidden relative">
-                  <Image src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Member" fill className="object-cover" />
+                <div>
+                  <div className="flex items-center gap-1 text-white font-bold">
+                    <Star className="w-3.5 h-3.5 fill-white text-white" />
+                    <span>4.98 / 5.0</span>
+                    <span className="text-zinc-400 font-normal ml-1">(1,200+ Verified Members)</span>
+                  </div>
                 </div>
-                <div className="w-7 h-7 rounded-full border border-brown-600 overflow-hidden relative">
-                  <Image src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Member" fill className="object-cover" />
-                </div>
-              </div>
-              <div className="text-left">
-                <div className="flex items-center gap-1 text-white font-bold">
-                  <Star className="w-3.5 h-3.5 fill-[#C5A880] text-[#C5A880]" />
-                  <span>4.98 / 5.0</span>
-                </div>
-                <div className="text-[11px] text-brown-400">1,200+ Verified Members</div>
-              </div>
+              </motion.div>
             </div>
 
-            <div className="h-6 w-[1px] bg-brown-800 hidden sm:block" />
+            {/* Right Column: Visual Athletic Card with Floating Glass Overlays */}
+            <div className="lg:col-span-5 relative flex justify-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="relative w-full max-w-md rounded-3xl overflow-hidden border border-zinc-800 bg-[#141418] shadow-2xl group"
+              >
+                {/* Main Hero Visual */}
+                <div className="relative h-[440px] sm:h-[480px] w-full bg-zinc-950 overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=1000&auto=format&fit=crop&q=85"
+                    alt="AURA Elite Training"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 500px"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#09090B] via-[#09090B]/20 to-transparent" />
+                </div>
 
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-[#C5A880]" />
-              <span>Strict Capacity Cap (Zero Wait Times)</span>
+                {/* Top Floating Glass Badge: Live Occupancy */}
+                <div className="absolute top-4 left-4 right-4 p-3 rounded-2xl bg-[#09090B]/90 border border-zinc-800 backdrop-blur-md flex items-center justify-between shadow-lg">
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <div>
+                      <div className="text-[11px] font-bold text-white uppercase tracking-wider">Live Facility Flow</div>
+                      <div className="text-[10px] text-zinc-400">42% Capacity • Optimal Training Space</div>
+                    </div>
+                  </div>
+                  <span className="text-xs font-black text-emerald-400 font-display">OPTIMAL</span>
+                </div>
+
+                {/* Bottom Floating Glass Card: Next Master Class */}
+                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#09090B]/95 border border-zinc-800 backdrop-blur-md shadow-xl">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="text-[10px] uppercase font-bold text-zinc-400 tracking-wider">
+                      Upcoming Elite Session
+                    </div>
+                    <span className="text-[10px] px-2 py-0.5 rounded bg-zinc-800 text-white font-semibold">
+                      Today • 07:00 AM
+                    </span>
+                  </div>
+                  <div className="text-sm font-bold text-white mb-1">
+                    Metabolic Conditioning & Heavy Power
+                  </div>
+                  <div className="flex items-center justify-between text-xs text-zinc-400">
+                    <span>Coach Marcus Vance</span>
+                    <Link href="/schedule" className="text-white hover:underline font-bold text-[11px] flex items-center gap-1">
+                      <span>Reserve</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
             </div>
-
-            <div className="h-6 w-[1px] bg-brown-800 hidden md:block" />
-
-            <div className="flex items-center gap-2">
-              <HeartPulse className="w-4 h-4 text-[#C5A880]" />
-              <span>38°F Plunge & Infrared Recovery</span>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* 2. STATS COUNTER STRIP */}
-      <section className="relative py-12 bg-[#140E0A] border-y border-brown-800/80">
+      <section className="relative py-12 bg-[#0F0F12] border-y border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
-            <StaggerItem className="text-center p-4 rounded-2xl glass-panel border-brown-800/80">
+            <StaggerItem className="text-center p-4 rounded-2xl bg-[#141418] border border-zinc-800">
               <div className="text-2xl sm:text-4xl font-extrabold font-display text-white mb-1">
                 <CounterNumber end={2500} suffix="+" />
               </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-brown-300">
+              <div className="text-xs font-bold uppercase tracking-wider text-zinc-400">
                 Active Athletes
               </div>
             </StaggerItem>
 
-            <StaggerItem className="text-center p-4 rounded-2xl glass-panel border-brown-800/80">
+            <StaggerItem className="text-center p-4 rounded-2xl bg-[#141418] border border-zinc-800">
               <div className="text-2xl sm:text-4xl font-extrabold font-display text-white mb-1">
                 <CounterNumber end={18} suffix="+" />
               </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-brown-300">
+              <div className="text-xs font-bold uppercase tracking-wider text-zinc-400">
                 Master Coaches
               </div>
             </StaggerItem>
 
-            <StaggerItem className="text-center p-4 rounded-2xl glass-panel border-brown-800/80">
+            <StaggerItem className="text-center p-4 rounded-2xl bg-[#141418] border border-zinc-800">
               <div className="text-2xl sm:text-4xl font-extrabold font-display text-white mb-1">
                 <CounterNumber end={45} suffix="+" />
               </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-brown-300">
+              <div className="text-xs font-bold uppercase tracking-wider text-zinc-400">
                 Weekly Classes
               </div>
             </StaggerItem>
 
-            <StaggerItem className="text-center p-4 rounded-2xl glass-panel border-brown-800/80">
+            <StaggerItem className="text-center p-4 rounded-2xl bg-[#141418] border border-zinc-800">
               <div className="text-2xl sm:text-4xl font-extrabold font-display text-white mb-1">
                 <CounterNumber end={99} suffix="%" />
               </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-brown-300">
+              <div className="text-xs font-bold uppercase tracking-wider text-zinc-400">
                 Member Retention
               </div>
             </StaggerItem>
@@ -329,13 +411,13 @@ export default function HomePage() {
       {/* 3. FOUR CLUB PILLARS */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SlideUp className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C5A880]">
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-zinc-400">
             Uncompromising Standards
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white mt-2 mb-4">
             ENGINEERED FOR ELITE RESULTS
           </h2>
-          <p className="text-brown-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
             Every square foot of AURA is curated to remove friction from your training regimen and deliver unmatched physical progression.
           </p>
         </SlideUp>
@@ -343,15 +425,15 @@ export default function HomePage() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {clubPillars.map((pillar, i) => (
             <StaggerItem key={i}>
-              <MotionCard className="glass-panel glass-panel-hover p-7 rounded-2xl h-full flex flex-col justify-between border-brown-800/80">
+              <MotionCard className="bg-[#141418] p-7 rounded-2xl h-full flex flex-col justify-between border border-zinc-800 hover:border-zinc-700 transition-all">
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-brown-900/80 border border-brown-700 flex items-center justify-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-5">
                     {pillar.icon}
                   </div>
                   <h3 className="text-lg font-bold font-display text-white mb-2">
                     {pillar.title}
                   </h3>
-                  <p className="text-brown-300 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
                     {pillar.desc}
                   </p>
                 </div>
@@ -362,11 +444,11 @@ export default function HomePage() {
       </section>
 
       {/* 4. MASTER COACHES PREVIEW */}
-      <section className="py-20 bg-[#140E0A] border-t border-brown-900/80">
+      <section className="py-20 bg-[#0F0F12] border-t border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <SlideUp>
-              <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C5A880]">
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-zinc-400">
                 World-Class Faculty
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white mt-2">
@@ -388,9 +470,9 @@ export default function HomePage() {
               <StaggerItem key={trainer.id}>
                 <div
                   onClick={() => setSelectedTrainer(trainer)}
-                  className="group cursor-pointer rounded-2xl overflow-hidden glass-panel border-brown-800/80 transition-all duration-300 hover:border-[#C5A880]/50"
+                  className="group cursor-pointer rounded-2xl overflow-hidden bg-[#141418] border border-zinc-800 transition-all duration-300 hover:border-zinc-600 shadow-lg"
                 >
-                  <div className="relative h-72 w-full overflow-hidden bg-brown-950">
+                  <div className="relative h-72 w-full overflow-hidden bg-zinc-950">
                     <Image
                       src={trainer.photo_url}
                       alt={trainer.name}
@@ -398,17 +480,17 @@ export default function HomePage() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D0906] via-[#0D0906]/20 to-transparent" />
-                    <div className="absolute top-3 right-3 px-2 py-0.5 rounded bg-brown-950/85 border border-brown-700 text-[10px] font-bold text-white backdrop-blur-md">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#09090B] via-[#09090B]/20 to-transparent" />
+                    <div className="absolute top-3 right-3 px-2 py-0.5 rounded bg-black/80 border border-zinc-700 text-[10px] font-bold text-white backdrop-blur-md">
                       {trainer.experience_years}+ Yrs Exp
                     </div>
                   </div>
 
                   <div className="p-5">
-                    <h3 className="text-lg font-bold font-display text-white group-hover:text-[#E8DDD3] transition-colors">
+                    <h3 className="text-lg font-bold font-display text-white group-hover:text-zinc-200 transition-colors">
                       {trainer.name}
                     </h3>
-                    <p className="text-xs text-[#C5A880] font-medium mb-3">
+                    <p className="text-xs text-zinc-400 font-medium mb-3">
                       {trainer.title}
                     </p>
 
@@ -416,14 +498,14 @@ export default function HomePage() {
                       {trainer.specialties.slice(0, 2).map((s, idx) => (
                         <span
                           key={idx}
-                          className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-brown-900/80 border border-brown-800 text-brown-300"
+                          className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-300"
                         >
                           {s}
                         </span>
                       ))}
                     </div>
 
-                    <span className="text-xs font-bold text-brown-200 group-hover:text-white inline-flex items-center gap-1">
+                    <span className="text-xs font-bold text-zinc-300 group-hover:text-white inline-flex items-center gap-1">
                       <span>View Dossier</span>
                       <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </span>
@@ -438,24 +520,24 @@ export default function HomePage() {
       {/* 5. MEMBERSHIP TIERS PREVIEW */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SlideUp className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C5A880]">
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-zinc-400">
             Investment in Longevity
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white mt-2 mb-4">
             MEMBERSHIP TIERS
           </h2>
-          <p className="text-brown-300 text-sm sm:text-base mb-6">
+          <p className="text-zinc-400 text-sm sm:text-base mb-6">
             Transparent pricing with zero initiation fees, no hidden contracts, and flexible commitments.
           </p>
 
           {/* Monthly / Yearly Toggle */}
-          <div className="inline-flex items-center p-1.5 rounded-2xl bg-[#17110C] border border-brown-800">
+          <div className="inline-flex items-center p-1.5 rounded-2xl bg-[#141418] border border-zinc-800">
             <button
               onClick={() => setBillingCycle('monthly')}
               className={`px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
                 billingCycle === 'monthly'
                   ? 'btn-gold'
-                  : 'text-brown-400 hover:text-white'
+                  : 'text-zinc-400 hover:text-white'
               }`}
             >
               Monthly Billing
@@ -465,11 +547,11 @@ export default function HomePage() {
               className={`px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
                 billingCycle === 'yearly'
                   ? 'btn-gold'
-                  : 'text-brown-400 hover:text-white'
+                  : 'text-zinc-400 hover:text-white'
               }`}
             >
               <span>Annual Commitment</span>
-              <span className="text-[10px] px-1.5 py-0.5 rounded bg-brown-950 text-white font-extrabold">
+              <span className="text-[10px] px-1.5 py-0.5 rounded bg-zinc-900 text-white font-extrabold border border-zinc-700">
                 SAVE 20%
               </span>
             </button>
@@ -486,13 +568,13 @@ export default function HomePage() {
                 <div
                   className={`relative rounded-3xl p-7 flex flex-col justify-between h-full transition-all duration-300 ${
                     tier.popular
-                      ? 'bg-[#1C140E] border-2 border-[#C5A880] lg:scale-105 z-10'
-                      : 'glass-panel border-brown-800/80 hover:border-brown-700'
+                      ? 'bg-[#18181D] border-2 border-white lg:scale-105 z-10 shadow-2xl'
+                      : 'bg-[#141418] border border-zinc-800 hover:border-zinc-700'
                   }`}
                 >
                   {tier.popular && (
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#C5A880] text-[#0D0906] font-extrabold text-[10px] uppercase tracking-widest flex items-center gap-1 shadow-md">
-                      <Sparkles className="w-3 h-3" />
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black font-extrabold text-[10px] uppercase tracking-widest flex items-center gap-1 shadow-md">
+                      <Sparkles className="w-3 h-3 text-black" />
                       <span>Most Popular Choice</span>
                     </div>
                   )}
@@ -501,21 +583,21 @@ export default function HomePage() {
                     <h3 className="text-2xl font-bold font-display text-white mb-1">
                       {tier.name}
                     </h3>
-                    <p className="text-xs text-brown-300 mb-6">{tier.tagline}</p>
+                    <p className="text-xs text-zinc-400 mb-6">{tier.tagline}</p>
 
-                    <div className="flex items-baseline gap-1.5 mb-6 pb-4 border-b border-brown-800/80">
+                    <div className="flex items-baseline gap-1.5 mb-6 pb-4 border-b border-zinc-800">
                       <span className="text-4xl sm:text-5xl font-extrabold font-display text-white">
                         ${price}
                       </span>
-                      <span className="text-xs text-brown-400 font-semibold uppercase tracking-wider">
+                      <span className="text-xs text-zinc-400 font-semibold uppercase tracking-wider">
                         / Month {billingCycle === 'yearly' && '(Billed Annually)'}
                       </span>
                     </div>
 
-                    <ul className="space-y-3 mb-8 text-xs text-brown-200">
+                    <ul className="space-y-3 mb-8 text-xs text-zinc-300">
                       {tier.features.map((f, idx) => (
                         <li key={idx} className="flex items-start gap-2.5">
-                          <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-white shrink-0 mt-0.5" />
                           <span>{f}</span>
                         </li>
                       ))}
@@ -541,7 +623,7 @@ export default function HomePage() {
         <div className="text-center mt-10">
           <Link
             href="/pricing"
-            className="text-xs font-bold text-white hover:text-brown-200 underline inline-flex items-center gap-1.5"
+            className="text-xs font-bold text-white hover:text-zinc-300 underline inline-flex items-center gap-1.5"
           >
             <span>Compare full feature matrix & executive privileges</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -550,10 +632,10 @@ export default function HomePage() {
       </section>
 
       {/* 6. TESTIMONIALS CAROUSEL */}
-      <section className="py-20 bg-[#140E0A] border-t border-brown-900/80">
+      <section className="py-20 bg-[#0F0F12] border-t border-zinc-800">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SlideUp className="mb-10">
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C5A880]">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-zinc-400">
               Verified Member Experiences
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-white mt-2">
@@ -568,11 +650,11 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35 }}
-              className="glass-panel p-6 sm:p-10 rounded-3xl border-brown-800/80 mb-6"
+              className="bg-[#141418] p-6 sm:p-10 rounded-3xl border border-zinc-800 shadow-xl mb-6"
             >
-              <div className="flex justify-center gap-1 mb-5 text-[#C5A880]">
+              <div className="flex justify-center gap-1 mb-5 text-white">
                 {Array.from({ length: testimonials[activeTestimonial].rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-[#C5A880]" />
+                  <Star key={i} className="w-4 h-4 fill-white" />
                 ))}
               </div>
 
@@ -581,7 +663,7 @@ export default function HomePage() {
               </blockquote>
 
               <div className="flex items-center justify-center gap-3">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-brown-600">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-zinc-700">
                   <Image
                     src={testimonials[activeTestimonial].avatar}
                     alt={testimonials[activeTestimonial].author}
@@ -594,7 +676,7 @@ export default function HomePage() {
                   <div className="font-bold font-display text-sm text-white">
                     {testimonials[activeTestimonial].author}
                   </div>
-                  <div className="text-xs text-brown-400">
+                  <div className="text-xs text-zinc-400">
                     {testimonials[activeTestimonial].role}
                   </div>
                 </div>
@@ -610,8 +692,8 @@ export default function HomePage() {
                 onClick={() => setActiveTestimonial(i)}
                 className={`transition-all rounded-full ${
                   activeTestimonial === i
-                    ? 'w-6 h-2 bg-[#C5A880]'
-                    : 'w-2 h-2 bg-brown-800 hover:bg-brown-600'
+                    ? 'w-6 h-2 bg-white'
+                    : 'w-2 h-2 bg-zinc-700 hover:bg-zinc-500'
                 }`}
                 aria-label={`Slide ${i + 1}`}
               />
@@ -621,16 +703,16 @@ export default function HomePage() {
       </section>
 
       {/* 7. CALL TO ACTION BANNER */}
-      <section className="py-20 relative overflow-hidden bg-gradient-to-br from-brown-950 via-[#150E0A] to-brown-950 border-t border-brown-800">
+      <section className="py-20 relative overflow-hidden bg-gradient-to-br from-black via-[#111114] to-black border-t border-zinc-800">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SlideUp>
-            <span className="text-xs uppercase font-extrabold tracking-[0.25em] text-[#C5A880]">
+            <span className="text-xs uppercase font-extrabold tracking-[0.25em] text-zinc-400">
               Limited Membership Availability
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white mt-2 mb-4">
               YOUR ATHLETIC EVOLUTION BEGINS NOW
             </h2>
-            <p className="text-brown-200 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-8">
+            <p className="text-zinc-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-8">
               Schedule your private concierge walkthrough and experience the premier high-performance club in person.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -658,7 +740,7 @@ export default function HomePage() {
       >
         {selectedTrainer && (
           <div className="flex flex-col md:flex-row gap-6 items-start">
-            <div className="relative w-full md:w-48 h-64 rounded-xl overflow-hidden shrink-0 border border-brown-800">
+            <div className="relative w-full md:w-48 h-64 rounded-xl overflow-hidden shrink-0 border border-zinc-800">
               <Image
                 src={selectedTrainer.photo_url}
                 alt={selectedTrainer.name}
@@ -668,25 +750,25 @@ export default function HomePage() {
               />
             </div>
             <div className="flex-1">
-              <span className="text-xs uppercase font-bold text-[#C5A880] tracking-wider">
+              <span className="text-xs uppercase font-bold text-zinc-400 tracking-wider">
                 {selectedTrainer.title}
               </span>
               <h4 className="text-2xl font-bold font-display text-white mt-1 mb-3">
                 {selectedTrainer.name}
               </h4>
-              <p className="text-brown-300 text-sm leading-relaxed mb-4">
+              <p className="text-zinc-300 text-sm leading-relaxed mb-4">
                 {selectedTrainer.bio}
               </p>
 
               <div className="mb-6">
-                <span className="text-xs font-bold uppercase text-brown-400 block mb-2">
+                <span className="text-xs font-bold uppercase text-zinc-400 block mb-2">
                   Disciplines & Certifications
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {selectedTrainer.specialties.map((s, idx) => (
                     <span
                       key={idx}
-                      className="text-xs px-2.5 py-1 rounded-md bg-brown-900 border border-brown-700 text-white font-semibold"
+                      className="text-xs px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-700 text-white font-semibold"
                     >
                       {s}
                     </span>
