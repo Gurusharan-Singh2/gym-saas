@@ -174,11 +174,11 @@ export default function HomePage() {
 
   return (
     <div className="bg-[#09090B] text-[#FFFFFF] overflow-hidden">
-      {/* 1. HERO SECTION (High-Impact 2-Column Split Hero) */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-8 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Ambient Subtle Radial Glows */}
-        <div className="gold-glow-orb w-[600px] h-[600px] -top-32 -left-32 opacity-20" />
-        <div className="brown-glow-orb w-[600px] h-[600px] top-1/3 -right-48 opacity-20" />
+      {/* 1. HERO SECTION (Spacious Non-Overlapping 2-Column Split Hero) */}
+      <section className="relative min-h-[85vh] flex items-center justify-center pt-6 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Ambient Radial Glows */}
+        <div className="gold-glow-orb w-[500px] h-[500px] -top-32 -left-32 opacity-15" />
+        <div className="brown-glow-orb w-[500px] h-[500px] top-1/3 -right-48 opacity-15" />
 
         {/* Hero Background Atmosphere */}
         <div className="absolute inset-0 z-0">
@@ -188,21 +188,21 @@ export default function HomePage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-15"
+            className="object-cover object-center opacity-10"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#09090B]/90 via-[#09090B]/70 to-[#09090B]" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            {/* Left Column: Bold Typography & Action Area */}
-            <div className="lg:col-span-7 text-left flex flex-col items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
+            {/* Left Column: Bold Clean Typography */}
+            <div className="lg:col-span-7 text-left flex flex-col items-start min-w-0">
               {/* Micro Tag */}
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800 backdrop-blur-md mb-5"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 backdrop-blur-md mb-4"
               >
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-[11px] uppercase font-bold tracking-[0.2em] text-zinc-300">
@@ -210,14 +210,14 @@ export default function HomePage() {
                 </span>
               </motion.div>
 
-              {/* Headline */}
+              {/* Headline with Balanced Responsive Sizing */}
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.1] mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold font-display tracking-tight text-white leading-[1.12] mb-5"
               >
-                ELEVATE YOUR <br />
+                ELEVATE YOUR <br className="hidden sm:inline" />
                 <span className="gold-gradient-text">PERFORMANCE & FORM</span>
               </motion.h1>
 
@@ -226,7 +226,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.15 }}
-                className="max-w-xl text-sm sm:text-base text-zinc-300 font-normal leading-relaxed mb-6"
+                className="max-w-lg text-xs sm:text-sm md:text-base text-zinc-300 font-normal leading-relaxed mb-6"
               >
                 A high-performance sanctuary engineered for athletes, executives, and dedicated lifters. Master coach periodization, calibrated Swedish Eleiko steel, and Nordic contrast recovery.
               </motion.p>
@@ -236,22 +236,22 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 text-xs text-zinc-300 w-full max-w-lg"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-7 text-xs text-zinc-300 w-full max-w-md"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
                   <span>Olympic Eleiko Calibrated Suite</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
                   <span>38°F Cold Plunge & Cedar Sauna</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
                   <span>InBody 770 Biometric Scans</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
                   <span>Strict Member Capacity Cap</span>
                 </div>
               </motion.div>
@@ -261,17 +261,17 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto mb-8"
+                className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto mb-7"
               >
                 <Link href="/pricing" className="w-full sm:w-auto">
-                  <MotionButton className="btn-gold w-full sm:w-auto px-8 py-3.5 rounded-xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-2.5">
+                  <MotionButton className="btn-gold w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-2">
                     <span>Claim 3-Day Executive Pass</span>
                     <ArrowRight className="w-4 h-4" />
                   </MotionButton>
                 </Link>
 
                 <Link href="/schedule" className="w-full sm:w-auto">
-                  <MotionButton className="btn-outline-gold w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2">
+                  <MotionButton className="btn-outline-gold w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2">
                     <Calendar className="w-4 h-4 text-white" />
                     <span>Class Timetable</span>
                   </MotionButton>
@@ -283,77 +283,75 @@ export default function HomePage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.35 }}
-                className="flex items-center gap-4 pt-4 border-t border-zinc-800/80 text-xs text-zinc-400"
+                className="flex items-center gap-3 pt-4 border-t border-zinc-800 text-xs text-zinc-400"
               >
                 <div className="flex -space-x-2">
-                  <div className="w-7 h-7 rounded-full border border-zinc-700 overflow-hidden relative">
+                  <div className="w-6 h-6 rounded-full border border-zinc-700 overflow-hidden relative">
                     <Image src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Member" fill className="object-cover" />
                   </div>
-                  <div className="w-7 h-7 rounded-full border border-zinc-700 overflow-hidden relative">
+                  <div className="w-6 h-6 rounded-full border border-zinc-700 overflow-hidden relative">
                     <Image src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Member" fill className="object-cover" />
                   </div>
-                  <div className="w-7 h-7 rounded-full border border-zinc-700 overflow-hidden relative">
+                  <div className="w-6 h-6 rounded-full border border-zinc-700 overflow-hidden relative">
                     <Image src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Member" fill className="object-cover" />
                   </div>
                 </div>
-                <div>
-                  <div className="flex items-center gap-1 text-white font-bold">
-                    <Star className="w-3.5 h-3.5 fill-white text-white" />
-                    <span>4.98 / 5.0</span>
-                    <span className="text-zinc-400 font-normal ml-1">(1,200+ Verified Members)</span>
-                  </div>
+                <div className="flex items-center gap-1 text-white font-bold text-xs">
+                  <Star className="w-3.5 h-3.5 fill-white text-white" />
+                  <span>4.98 / 5.0</span>
+                  <span className="text-zinc-400 font-normal ml-1">(1,200+ Members)</span>
                 </div>
               </motion.div>
             </div>
 
             {/* Right Column: Visual Athletic Card with Floating Glass Overlays */}
-            <div className="lg:col-span-5 relative flex justify-center">
+            <div className="lg:col-span-5 relative flex justify-center lg:justify-end w-full">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative w-full max-w-md rounded-3xl overflow-hidden border border-zinc-800 bg-[#141418] shadow-2xl group"
+                className="relative w-full max-w-sm sm:max-w-md lg:max-w-none rounded-3xl overflow-hidden border border-zinc-800 bg-[#141418] shadow-2xl group"
               >
                 {/* Main Hero Visual */}
-                <div className="relative h-[440px] sm:h-[480px] w-full bg-zinc-950 overflow-hidden">
+                <div className="relative h-[380px] sm:h-[430px] w-full bg-zinc-950 overflow-hidden">
                   <Image
                     src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=1000&auto=format&fit=crop&q=85"
                     alt="AURA Elite Training"
                     fill
-                    sizes="(max-width: 1024px) 100vw, 500px"
+                    sizes="(max-width: 1024px) 100vw, 450px"
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#09090B] via-[#09090B]/20 to-transparent" />
                 </div>
 
                 {/* Top Floating Glass Badge: Live Occupancy */}
-                <div className="absolute top-4 left-4 right-4 p-3 rounded-2xl bg-[#09090B]/90 border border-zinc-800 backdrop-blur-md flex items-center justify-between shadow-lg">
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                <div className="absolute top-3.5 left-3.5 right-3.5 p-3 rounded-2xl bg-[#09090B]/90 border border-zinc-800 backdrop-blur-md flex items-center justify-between shadow-lg">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                     <div>
-                      <div className="text-[11px] font-bold text-white uppercase tracking-wider">Live Facility Flow</div>
-                      <div className="text-[10px] text-zinc-400">42% Capacity • Optimal Training Space</div>
+                      <div className="text-[10px] font-bold text-white uppercase tracking-wider">Live Facility Flow</div>
+                      <div className="text-[9px] text-zinc-400">42% Capacity • Optimal Space</div>
                     </div>
                   </div>
-                  <span className="text-xs font-black text-emerald-400 font-display">OPTIMAL</span>
+                  <span className="text-[11px] font-black text-emerald-400 font-display">OPTIMAL</span>
                 </div>
 
                 {/* Bottom Floating Glass Card: Next Master Class */}
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#09090B]/95 border border-zinc-800 backdrop-blur-md shadow-xl">
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="text-[10px] uppercase font-bold text-zinc-400 tracking-wider">
+                <div className="absolute bottom-3.5 left-3.5 right-3.5 p-3.5 rounded-2xl bg-[#09090B]/95 border border-zinc-800 backdrop-blur-md shadow-xl">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <div className="text-[9px] uppercase font-bold text-zinc-400 tracking-wider">
                       Upcoming Elite Session
                     </div>
-                    <span className="text-[10px] px-2 py-0.5 rounded bg-zinc-800 text-white font-semibold">
+                    <span className="text-[9px] px-2 py-0.5 rounded bg-zinc-800 text-white font-semibold">
                       Today • 07:00 AM
                     </span>
                   </div>
-                  <div className="text-sm font-bold text-white mb-1">
+                  <div className="text-xs font-bold text-white mb-1">
                     Metabolic Conditioning & Heavy Power
                   </div>
-                  <div className="flex items-center justify-between text-xs text-zinc-400">
+                  <div className="flex items-center justify-between text-[11px] text-zinc-400">
                     <span>Coach Marcus Vance</span>
-                    <Link href="/schedule" className="text-white hover:underline font-bold text-[11px] flex items-center gap-1">
+                    <Link href="/schedule" className="text-white hover:underline font-bold text-[10px] flex items-center gap-1">
                       <span>Reserve</span>
                       <ArrowRight className="w-3 h-3" />
                     </Link>
