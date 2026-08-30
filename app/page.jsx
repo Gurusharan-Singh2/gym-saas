@@ -174,25 +174,22 @@ export default function HomePage() {
 
   return (
     <div className="bg-[#09090B] text-[#FFFFFF] overflow-hidden">
-      {/* 1. HERO SECTION — Full-Width 2-Column Split */}
-      <section className="relative w-full px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[calc(100vh-80px)] flex flex-col justify-center">
-
-
-
+      {/* 1. HERO SECTION — Full-Width 2-Column Responsive Split */}
+      <section className="relative w-full pt-6 sm:pt-10 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden lg:min-h-[calc(100vh-80px)] flex flex-col justify-center">
         <div className="relative z-10 max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
             {/* Left Column: Bold Clean Typography */}
-            <div className="text-left flex flex-col items-start">
+            <div className="text-left flex flex-col items-start w-full">
               {/* Micro Tag */}
               <motion.div
                 initial={{ opacity: 0, y: -6 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 backdrop-blur-md mb-4"
+                className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-zinc-900 border border-zinc-800 backdrop-blur-md mb-3 sm:mb-4 max-w-full"
               >
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-[11px] uppercase font-bold tracking-[0.2em] text-zinc-300">
-                  Manhattan Flagship • Private High-Performance Club
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                <span className="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider sm:tracking-[0.2em] text-zinc-300 truncate">
+                  Manhattan Flagship • Private Athletic Club
                 </span>
               </motion.div>
 
@@ -201,7 +198,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold font-display tracking-tight text-white leading-[1.12] mb-5"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold font-display tracking-tight text-white leading-[1.12] mb-3 sm:mb-5"
               >
                 ELEVATE YOUR <br className="hidden sm:inline" />
                 <span className="gold-gradient-text">PERFORMANCE & FORM</span>
@@ -212,7 +209,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.35, delay: 0.08 }}
-                className="max-w-lg text-xs sm:text-sm md:text-base text-zinc-300 font-normal leading-relaxed mb-6"
+                className="max-w-lg text-xs sm:text-sm md:text-base text-zinc-300 font-normal leading-relaxed mb-5 sm:mb-6"
               >
                 A high-performance sanctuary engineered for athletes, executives, and dedicated lifters. Master coach periodization, calibrated Swedish Eleiko steel, and Nordic contrast recovery.
               </motion.p>
@@ -222,7 +219,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-7 text-xs text-zinc-300 w-full max-w-md"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5 mb-6 sm:mb-7 text-xs text-zinc-300 w-full max-w-md"
               >
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
@@ -247,7 +244,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto mb-7"
+                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full sm:w-auto mb-6 sm:mb-7"
               >
                 <Link href="/pricing" className="w-full sm:w-auto">
                   <MotionButton className="btn-gold w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-2">
@@ -269,7 +266,7 @@ export default function HomePage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.35 }}
-                className="flex items-center gap-3 pt-4 border-t border-zinc-800 text-xs text-zinc-400"
+                className="flex items-center gap-3 pt-3 sm:pt-4 border-t border-zinc-800 text-xs text-zinc-400 w-full"
               >
                 <div className="flex -space-x-2">
                   <div className="w-6 h-6 rounded-full border border-zinc-700 overflow-hidden relative">
@@ -291,7 +288,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Column: Visual Athletic Card with Floating Glass Overlays */}
-            <div className="relative flex justify-center lg:justify-end w-full">
+            <div className="relative flex justify-center lg:justify-end w-full mt-4 lg:mt-0">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -299,7 +296,7 @@ export default function HomePage() {
                 className="relative w-full max-w-sm sm:max-w-md lg:max-w-none rounded-3xl overflow-hidden border border-zinc-800 bg-[#141418] shadow-2xl group"
               >
                 {/* Main Hero Visual */}
-                <div className="relative h-[380px] sm:h-[430px] w-full bg-zinc-950 overflow-hidden">
+                <div className="relative h-[300px] sm:h-[380px] lg:h-[430px] w-full bg-zinc-950 overflow-hidden">
                   <Image
                     src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=1000&auto=format&fit=crop&q=85"
                     alt="AURA Elite Training"
@@ -311,7 +308,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Top Floating Glass Badge: Live Occupancy */}
-                <div className="absolute top-3.5 left-3.5 right-3.5 p-3 rounded-2xl bg-[#09090B]/90 border border-zinc-800 backdrop-blur-md flex items-center justify-between shadow-lg">
+                <div className="absolute top-3 left-3 right-3 sm:top-3.5 sm:left-3.5 sm:right-3.5 p-2.5 sm:p-3 rounded-2xl bg-[#09090B]/90 border border-zinc-800 backdrop-blur-md flex items-center justify-between shadow-lg">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                     <div>
@@ -323,8 +320,8 @@ export default function HomePage() {
                 </div>
 
                 {/* Bottom Floating Glass Card: Next Master Class */}
-                <div className="absolute bottom-3.5 left-3.5 right-3.5 p-3.5 rounded-2xl bg-[#09090B]/95 border border-zinc-800 backdrop-blur-md shadow-xl">
-                  <div className="flex items-center justify-between mb-1.5">
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-3.5 sm:left-3.5 sm:right-3.5 p-3 sm:p-3.5 rounded-2xl bg-[#09090B]/95 border border-zinc-800 backdrop-blur-md shadow-xl">
+                  <div className="flex items-center justify-between mb-1">
                     <div className="text-[9px] uppercase font-bold text-zinc-400 tracking-wider">
                       Upcoming Elite Session
                     </div>
@@ -345,7 +342,6 @@ export default function HomePage() {
                 </div>
               </motion.div>
             </div>
-          </div>
         </div>
       </section>
 
