@@ -1,0 +1,92 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,jsx}",
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./lib/**/*.{js,jsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        // Ultra-clean professional Obsidian, Carbon & Titanium palette
+        obsidian: {
+          950: "#09090B",
+          900: "#0F0F12",
+          850: "#141418",
+          800: "#1A1A20",
+          700: "#27272F",
+          600: "#3F3F4A",
+          500: "#52525F",
+        },
+        zinc: {
+          50: "#FAFAFA",
+          100: "#F4F4F5",
+          200: "#E4E4E7",
+          300: "#D4D4D8",
+          400: "#A1A1AA",
+          500: "#71717A",
+          600: "#52525B",
+          700: "#3F3F46",
+          800: "#27272A",
+          900: "#18181B",
+          950: "#09090B",
+        },
+        // Mapped backwards-compatible colors to clean obsidian & slate
+        brown: {
+          50: "#FFFFFF",
+          100: "#FAFAFA",
+          200: "#E4E4E7",
+          300: "#D4D4D8",
+          400: "#A1A1AA",
+          500: "#71717A",
+          600: "#52525B",
+          700: "#3F3F46",
+          800: "#27272A",
+          900: "#18181B",
+          950: "#0F0F12",
+        },
+        gold: {
+          50: "#FFFFFF",
+          100: "#F4F4F5",
+          200: "#E4E4E7",
+          300: "#D4D4D8",
+          400: "#FFFFFF",
+          500: "#E4E4E7",
+          600: "#A1A1AA",
+          700: "#71717A",
+          800: "#3F3F46",
+          900: "#27272A",
+          accent: "#FFFFFF",
+        },
+        charcoal: {
+          950: "#09090B",
+          900: "#0F0F12",
+          850: "#141418",
+          800: "#1A1A20",
+          700: "#27272F",
+          600: "#3F3F4A",
+          500: "#52525F",
+        },
+      },
+      fontFamily: {
+        sans: ["Poppins", "var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["Poppins", "var(--font-display)", "system-ui", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+      borderRadius: {
+        "2xl": "1rem",
+        "3xl": "1.5rem",
+        "4xl": "2rem",
+      },
+      boxShadow: {
+        "gold-sm": "0 2px 10px rgba(255, 255, 255, 0.08)",
+        "gold-md": "0 4px 20px rgba(255, 255, 255, 0.12)",
+        "gold-lg": "0 10px 30px rgba(255, 255, 255, 0.18)",
+        "card-glow": "0 0 30px rgba(255, 255, 255, 0.04)",
+      },
+    },
+  },
+  plugins: [],
+};

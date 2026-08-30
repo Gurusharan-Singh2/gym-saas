@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-display: 'Poppins', system-ui, -apple-system, sans-serif;
+
+  /* Modern Obsidian, Carbon & Titanium Theme */
+  --bg-primary: #09090B;
+  --bg-surface: #0F0F12;
+  --bg-card: #141418;
+  --border-subtle: #27272A;
+  --border-focus: #FFFFFF;
+  --gold-accent: #FFFFFF;
+  --text-primary: #FFFFFF;
+  --text-secondary: #E4E4E7;
+  --text-muted: #A1A1AA;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #FFFFFF;
+  font-family: 'Poppins', var(--font-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: 'Poppins', var(--font-display);
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+}
+
+/* Minimalist Dark Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272A;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525B;
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  background: linear-gradient(135deg, rgba(20, 20, 24, 0.85) 0%, rgba(15, 15, 18, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid #27272A;
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: linear-gradient(135deg, rgba(28, 28, 34, 0.95) 0%, rgba(20, 20, 24, 1) 100%);
+  border-color: #3F3F46;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.03);
+  transform: translateY(-3px);
+}
+
+.glass-header {
+  background: rgba(9, 9, 11, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid #27272A;
+}
+
+/* Professional Input Styling */
+.luxury-input {
+  background: #141418 !important;
+  border: 1px solid #27272A !important;
+  color: #FFFFFF !important;
+  border-radius: 0.875rem;
+  padding: 0.85rem 1.25rem 0.85rem 3rem !important;
+  font-size: 0.925rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s ease;
+  outline: none;
+  min-height: 50px;
+}
+
+.luxury-input:focus {
+  border-color: #FFFFFF !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+  background: #18181D !important;
+}
+
+.luxury-input::placeholder {
+  color: #71717A !important;
+}
+
+/* Primary White Button with Crisp Dark Text */
+.btn-gold {
+  background: #FFFFFF !important;
+  color: #09090B !important;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gold, .btn-gold span, .btn-gold svg {
+  color: #09090B !important;
+}
+
+.btn-gold:hover {
+  background: #F4F4F5 !important;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-gold:active {
+  transform: translateY(1px);
+}
+
+/* Clean Outline Button */
+.btn-outline-gold {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #3F3F46;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(10px);
+}
+
+.btn-outline-gold:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #FFFFFF;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
