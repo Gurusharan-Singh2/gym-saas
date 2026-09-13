@@ -9,6 +9,7 @@ import { MotionButton } from './MotionWrapper';
 
 const NAV_LINKS = [
   { name: 'Home', href: '/' },
+  { name: 'Workouts', href: '/workouts' },
   { name: 'About', href: '/about' },
   { name: 'Trainers', href: '/trainers' },
   { name: 'Pricing', href: '/pricing' },

@@ -157,6 +157,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/workouts" className="hover:text-white transition-colors">
+                  Daily Workout Split & Exercises
+                </Link>
+              </li>
+              <li>
                 <Link href="/gallery" className="hover:text-white transition-colors">
                   Facility Tour & Gallery
                 </Link>

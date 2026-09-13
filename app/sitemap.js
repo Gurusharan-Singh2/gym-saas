@@ -7,6 +7,7 @@ export default async function sitemap() {
     '/trainers',
     '/pricing',
     '/schedule',
+    '/workouts',
     '/gallery',
     '/blog',
     '/contact',
